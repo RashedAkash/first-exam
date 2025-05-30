@@ -17,9 +17,42 @@
 </head>
 
 <body>
-  <header></header>
+  <header>
+    <!-- Header -->
+    <header class="bg-white shadow-md">
+      <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+        <!-- Logo -->
+        <div class="text-2xl font-bold text-indigo-600">
+          Rashed Hossain
+        </div>
+    
+        <!-- Nav (Desktop) -->
+        <nav class="hidden md:flex gap-6 text-gray-700 font-medium">
+          <a href="#" class="hover:text-indigo-600">Home</a>
+          <a href="#" class="hover:text-indigo-600">About</a>
+          <a href="#" class="hover:text-indigo-600">Services</a>
+          <a href="#" class="hover:text-indigo-600">Contact</a>
+        </nav>
+    
+        <!-- Mobile Menu Button -->
+        <button id="menuToggle" class="md:hidden focus:outline-none">
+          <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    
+      <!-- Mobile Nav -->
+      <div id="mobileMenu" class="md:hidden hidden px-4 pb-4">
+        <a href="#" class="block py-2 text-gray-700 hover:text-indigo-600">Home</a>
+        <a href="#" class="block py-2 text-gray-700 hover:text-indigo-600">About</a>
+        <a href="#" class="block py-2 text-gray-700 hover:text-indigo-600">Services</a>
+        <a href="#" class="block py-2 text-gray-700 hover:text-indigo-600">Contact</a>
+      </div>
+    </header>
+  </header>
   <main>
-
     <!-- Hero Section -->
     <section class="h-screen flex items-center justify-center bg-gray-100 px-6">
       <div class="text-center max-w-3xl" data-aos="fade-up" data-aos-duration="2000" data-aos-easing="ease-in-out">
@@ -41,9 +74,6 @@
         </div>
       </div>
     </section>
-  
-
-
     <!-- about me section -->
     <section data-aos="fade-up" 
     data-aos-duration="2000">
@@ -295,7 +325,6 @@
           </form>
         </div>
       </div>
-
     </section>
   </main>
   <footer >
@@ -404,6 +433,15 @@
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script>
     AOS.init();
+  </script>
+  <!-- header -->
+  <script>
+    const toggleBtn = document.getElementById('menuToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    toggleBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
   </script>
 
 
